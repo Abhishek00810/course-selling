@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  height: 100vh; /* Full height of viewport */
+}
+
+.component {
+  overflow: hidden;
+  height: 100vh; /* Ensures component takes up full viewport height */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items:start;
+}
+
+.part1 {
+  width: 50%;
+}
+
+.part2 {
+  width: 50%;
+}
+
+.part2 img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Ensure image does not exceed container height */
+  object-fit: contain; /* Ensure the entire image fits without being cropped */
+}
+
+
+
+.upperbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px
+}
+
+.upperbar {
+  font-size: 0.9vw;
+}
+.upperbar h4{
+  font-weight: 550;
+  font-size: 1.2vw;
+}
+
+.upperbar h4 i{
+  margin: 2px;
+  font-weight: 600;
+  font-size: 1.2vw;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main h1{
+  margin-bottom: 0.1%;
+}
+
+.main h4{
+  color: gray;
+  font-weight: 500;
+  margin-bottom: 4%;
+}
+
+.main button{
+  font-weight: 600;
+  font-size: 1vw;
+  width: 300px;
+  height: 34px;
+  margin-bottom: 1%;
+  background-color: transparent;
+  border: 2px solid rgba(128, 128, 128, 0.438);
+  border-radius: 5px;
+}
+
+.main button i{
+  font-size: 1.2vw;
+  margin: 5px;
+}
+
+.holders{
+  margin-bottom: 10px;
+}
+.holders h2{
+  align-items: start;
+  font-size: 1vw;
+}
+.holders input{
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 6px;
+  border: 2px solid rgba(128, 128, 128, 0.438);
+}
+
+#submitcreate{
+  background-color: black;
+  font-weight: 600px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+
+
+.loginsum{
+  display: flex;           /* Enables flexbox */
+  justify-content: start; /* Optional: space between items */
+  align-items: center;  
+  flex-wrap: nowrap;
+  margin-top: 30px;
+}
+
+.loginsum h5{
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.loginsum h3{
+  margin-left: 5px;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.incorrect {
+  margin-top: 20px;
+}
+.incorrect h2{
+  font-size: 12px !important;
+  color: red  !important;
+  font-weight: 500 !important;
+}
+.incorrect h2 i{
+  margin-right: 10px;
+  color: red
+}

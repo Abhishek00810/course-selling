@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  /* Basic body styling */
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #FBF8F6;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+
+.homemain{
+    padding: 5px;
+    padding-top: 1px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.nav{
+    position: relative;
+    margin: 40px 20px;
+    height: 50%;
+    border-radius: 20px;
+    padding: 10% 2%;
+    background-color: rgb(236, 218, 204);
+}
+
+.nav h4 i{
+    font-weight: 500;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    color: black;
+    font-size: 25px
+}
+.nav h4 i:hover{
+    background-color: black;
+    color: white;
+}
+.nav h4{
+    margin-bottom: 20px;
+}
+
+.uppernav{
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+}
+.lowernav{
+    position: absolute;
+    bottom: 0;
+}
+
+.feature{
+    height: 100%;
+    width: 70%;
+    margin-right: 40px;
+    padding-right: 20px;
+    margin-left: 40px;
+    margin-top: 80px;
+    align-items: start;
+}
+.feature h1{
+    line-height: 80px;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.mycourse{
+    width: 40%;
+    background-color: rgb(236, 218, 204);
+}
+.containers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    background-color: rgb(191,240,219);
+    width: 330px;
+    height: 190px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.courseimage{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.courseimage img{
+    width: 30px
+}
+.price{
+    font-size: 13px;
+    font-weight: 300;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+.description h3{
+    font-weight: 500;
+    font-size: 15px;
+    margin: 10px;
+}
+.feature h4{
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.filter{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.filterchild{
+    background-color: rgb(236, 218, 204);
+    width: 150px;
+    padding: 20px 0px;
+    font-weight: 500;
+    font-size: 13px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.filterchild:hover{
+    background-color: black;
+    color: wheat;
+}
+.filterchild i{
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 15px;
+    margin-right: 10px;
+    margin-left: 2px;
+    background-color: white;
+}
+
+
+
+
+.type h1{
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.type h1 i{
+    font-size: 20px;
+    margin-right: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+}
+.title{
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.mycourse{
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.userinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15%;
+}
+
+
+.userinfo i{
+    background-color: white;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.userinfo i:hover{
+    background-color: black;
+    color: #F8B577;
+}
+
+.userinfo h3{
+    margin-top: 20px;
+    
+}
+
+.github i{
+    background-color: transparent;
+}
+.github{
+    height: 40px;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 50px;
+    width: 300px;
+    align-items: center;
+}
+
+.purchasedcourse{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.mycoursetab {
+    margin: auto;
+    font-size: 10px;
+
+}
+
+.purchasebox{
+    margin: auto;
+}
+
+.purchasebox .box{
+    background-color: #F8B577;
+}
+
+.purchasebox .box h1{
+    font-size: 19px;
+    font-weight: 500;
+    margin: 20px;
+    padding-top: 20px;
+}
+.purchasebox .box h1 i{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}

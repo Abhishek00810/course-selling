@@ -14,7 +14,8 @@ const userMiddleware = session({
     cookie: {
       httpOnly: true,
       secure: false, // Set to true when using HTTPS
-      maxAge: 60000000  // 1 minute expiration
+      maxAge: 60000000,  // 1 minute expiration
+      sameSite: 'none'
     }
   });
 

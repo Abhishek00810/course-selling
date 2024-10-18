@@ -5,9 +5,9 @@ const  {userMiddleware}  = require('../Middleware/user')
 const courseRouter = Router();
 
 courseRouter.post('/purchase', userMiddleware ,async function(req, res){
-    const userId = req.userId;
+    const userId = req.body.userId;
     const courseId = req.body.courseId
-
+    console.log(userId)
     await purchaseModel.create({
         userId,
         courseId
@@ -18,7 +18,8 @@ courseRouter.post('/purchase', userMiddleware ,async function(req, res){
     })
 })
 
-courseRouter.post('/preview',async function(req, res){
+courseRouter.get('/preview',async function(req, res){
+    
     const course = await courseModel.find({});
     res.json({
         course
