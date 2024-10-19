@@ -148,3 +148,16 @@ body {
   margin-right: 10px;
   color: red
 }
+.courseType{
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+}
+.courseType h3{
+  font-size: 14px;
+  font-weight: 499;
+}
+.courseType h3 i{
+  margin-right: 10px;
+  margin-left: 10px;
+}

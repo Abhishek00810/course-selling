@@ -25,6 +25,13 @@ function Home(props) {
     const [showAdd,setshowAdd] = useState(false);
     const [courseId, setcourseId] = useState('');
 
+
+    const getColor = (value)=>{
+        if(value == 'It & Software') return '#F3C5C5';
+        else if(value === 'Business') return '#FAE0C1';
+        else if(value === 'Media Training') return '#D5D2FE';
+        else if(value === 'Interior') return '#BFF0DB';
+    };
     function handleOpenpopup()
     {
         setShowpop(true);
@@ -180,24 +187,35 @@ function Home(props) {
     
         const items = myItems.courseData;
         return (
-            Loading ? (
-                <p>Loading...</p> // Show loading text while fetching data
-            ) : (
-                items.length > 0 ? (
-                    items.map((course, index) => (
-                        <div className="purchasebox" key={index}>
-                            <div className="box">
-                                <h1><i className="ri-apps-line"></i>{course.title}</h1>
-                                <div className="title">
-                                    {course.description}
+            <div className="purchasebox">
+                {Loading ? (
+                    <p>Loading...</p> // Show loading text while fetching data
+                ) : (
+                    items.length > 0 ? ( // Check if Data has items
+                        items.map((course, index) => ( // Map through the Data array
+                            <div style={{backgroundColor: getColor(course.courseType)}} className="box" onClick={() => ADDNEWCOURSE(course)} key={index}>
+                                <div className="type">
+                                    <h1><i className="ri-apps-line"></i>{course.title}</h1> {/* Assuming course has a category */}
+                                </div>
+                                <div className="description">
+                                   <h3>{course.title} - {course.description}</h3> 
+                                </div>
+                                <div className="price">
+                                    <h3>Go to course</h3>
+                                </div>
+                                <div className="courseimage">
+                                    <img src="https://www.vikingsoftware.com/wp-content/uploads/2024/02/C-2.png" alt="" />
+                                </div>
+                                <div className="courseType">
+                                    <h3><i class="ri-price-tag-3-fill"></i>{course.courseType}</h3>
                                 </div>
                             </div>
-                        </div>
-                    ))
-                ) : (
-                    <p>No Purchased Courses</p> // Show if no purchased courses are available
-                )
-            )
+                        ))
+                    ) : (
+                        <p>No courses available</p> // Show if there are no courses
+                    )
+                )}
+            </div>
         );
     }
 
@@ -238,7 +256,7 @@ function Home(props) {
                 ) : (
                     items.length > 0 ? ( // Check if Data has items
                         items.map((course, index) => ( // Map through the Data array
-                            <div className="box" onClick={() => ADDNEWCOURSE(course)} key={index}>
+                            <div style={{backgroundColor: getColor(course.courseType)}} className="box" onClick={() => ADDNEWCOURSE(course)} key={index}>
                                 <div className="type">
                                     <h1><i className="ri-apps-line"></i>{course.title}</h1> {/* Assuming course has a category */}
                                 </div>
@@ -250,6 +268,9 @@ function Home(props) {
                                 </div>
                                 <div className="courseimage">
                                     <img src="https://www.vikingsoftware.com/wp-content/uploads/2024/02/C-2.png" alt="" />
+                                </div>
+                                <div className="courseType">
+                                    <h3><i class="ri-price-tag-3-fill"></i>{course.courseType}</h3>
                                 </div>
                             </div>
                         ))

@@ -31,7 +31,7 @@ html, body {
     height: 50%;
     border-radius: 20px;
     padding: 10% 2%;
-    background-color: rgb(236, 218, 204);
+    background-color: #F3EBE5;
 }
 
 .nav h4 i{
@@ -76,8 +76,10 @@ html, body {
 }
 
 .mycourse{
+    
     width: 40%;
-    background-color: rgb(236, 218, 204);
+    align-items: center;
+    background-color: #F3EBE5;
 }
 .containers{
     display: flex;
@@ -88,8 +90,8 @@ html, body {
 
 .box{
     background-color: rgb(191,240,219);
-    width: 330px;
-    height: 190px;
+    width: 340px;
+    height: 200px;
     flex-shrink: 0;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -137,7 +139,7 @@ html, body {
 }
 
 .filterchild{
-    background-color: rgb(236, 218, 204);
+    background-color: #F3EBE5;
     width: 150px;
     padding: 20px 0px;
     font-weight: 500;
