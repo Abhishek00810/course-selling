@@ -365,7 +365,7 @@ function Home(props) {
 
             <Popup show = {showLogout} >
                 <div className="logout-parent">
-                    <h1>Are you are you want to Logout</h1>
+                    <h1>Are you are you want to Logout?</h1>
                     <button onClick={Logoutsession}>Yes</button>
                     <button onClick={HideLogout}>No</button>
                 </div>

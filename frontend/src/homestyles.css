@@ -260,3 +260,27 @@ html, body {
     font-weight: 600;
     margin: 20px;
 }
+
+.logout-parent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-25%, -25%);
+}
+
+.logout-parent h1{
+    font-size: 20px;
+}
+
+.logout-parent button
+{
+    background-color: white;
+    width: 90px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-right: 40px;
+
+}
