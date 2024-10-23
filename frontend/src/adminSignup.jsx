@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
-function Signup()
+function Adminsignup()
 {
     const navigate = useNavigate();
     const [Email, setEmail] = useState('');
@@ -18,9 +18,9 @@ function Signup()
     function CALLCREATEAPI(e)
     {
         e.preventDefault()
-        axios.post('http://localhost:3000/api/v1/user/signup', {Email, Password, Firstname, Lastname})
+        axios.post('http://localhost:3000/api/v1/admin/signup', {Email, Password, Firstname, Lastname})
             .then(response=>{
-                navigate('/login');
+                navigate('/adminlogin');
             })
             .catch(error=>{
             })
@@ -52,7 +52,7 @@ function Signup()
                     <h4><i class="ri-arrow-left-line"></i>Go back</h4>
                 </div>
                 <form className="main" onSubmit={CALLCREATEAPI}>
-                    <h1>Create admin</h1>
+                    <h1>Create admin account</h1>
                     <h4>Start your 30-day free trial.Cancel Anytime.</h4>
                     <button  onClick={GoogleAuth}><i class="ri-google-fill"></i>Sign up with Google</button>
                     <button><i class="ri-apple-fill"></i>Sign up with Apple ID</button>
@@ -96,7 +96,6 @@ function Signup()
 
 
                     <div className="holders">
-                        
                         <h2>Password*</h2>
                         <input name = "password"
                         required
@@ -125,4 +124,4 @@ function Signup()
 }
 
 
-export default Signup;
+export default Adminsignup;

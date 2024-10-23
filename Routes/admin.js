@@ -10,15 +10,16 @@ const bcrypt = require('bcrypt');
 
 adminRouter.use(adminMiddleware)
 adminRouter.post('/signup', async function(req, res){
-    const { email, password, firstName, lastName } = req.body;
-    bcrypt.hash(password, saltRounds,async function(err, hash){
+    const { Email, Password, Firstname, Lastname } = req.body;
+    console.log("Signup called")
+    bcrypt.hash(Password, saltRounds,async function(err, hash){
         try
         {
             await adminModel.create({
-                email: email,
+                email: Email,
                 password: hash,
-                firstName: firstName,
-                lastName: lastName
+                firstName: Firstname,
+                lastName: Lastname
             })
             res.json({
                 message: "Signed up succeed"
@@ -35,17 +36,20 @@ adminRouter.post('/signup', async function(req, res){
 
 adminRouter.post('/signin', async function(req, res){
     const {email, password} = req.body;
+    console.log(req.body);
     try
     {
         const user = await adminModel.findOne({
             email: email, 
         })
+        console.log(user);
         const result = bcrypt.compare(password, user.password);
         if(result)
         {
             req.session.user = { email };
             res.json({
-                message: "Login successfully"
+                message: "Login successfully",
+                adminId: user._id
             })
         }
         else
@@ -60,13 +64,14 @@ adminRouter.post('/signin', async function(req, res){
             message: "Invalid transaction"
         })
     }
+    console.log(req.session);
 })
 
 adminRouter.post('/course', async function(req, res){
-    const {title, description, price, imageUrl} = req.body;
-    const creatorId = req.adminId;
-
-    if(req.session.user)
+    const {title, description, price, imageUrl, courseType} = req.body;
+    const {adminid} = req.headers;
+    console.log(adminid);
+    if(adminid)
     {
         try{
             await courseModel.create({
@@ -74,7 +79,8 @@ adminRouter.post('/course', async function(req, res){
                 description: description,
                 price: price, 
                 imageUrl: imageUrl,
-                creatorId: creatorId
+                creatorId: adminid,
+                courseType: courseType
             })
             res.json({
                 message: "Course created"
@@ -95,10 +101,9 @@ adminRouter.post('/course', async function(req, res){
 
 
 adminRouter.put('/course', adminMiddleware, async function(req, res){
-    const adminId = req.adminId;
     const {title, description, price, imageUrl, courseId} = req.body;
-
-
+    const {adminId} = req.header;
+    console.log(adminId);
     try{
         const course = await adminModel.updateOne({
             _id: courseId,

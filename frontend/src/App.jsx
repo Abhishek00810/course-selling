@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // C
 import './index.css';
 
 import Signup from './Signup';
-import Login from './Login';
 import Create from './Create';
 
 function App() {
@@ -15,11 +14,11 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           
           {/* Route for login page */}
-          <Route path="/login" element={<Login />} />
+ 
           
           {/* Route for create page */}
-          <Route path="/create" element={<Create />} />
-
+          <Route path="/login" element={<Signup />} />
+          <Route path="/create" element={<Login />} />
           <Route path="/" element={<Signup />} />  {/* Default route, renders Signup component */}
 
         </Routes>

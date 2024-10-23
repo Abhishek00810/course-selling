@@ -172,8 +172,7 @@ userRouter.post('/purchaseid', async function (req, res) {
                 res.status(500).json({
                     message: "An error occurred during loading"
                 });
-            } 
-        
+            }
         const purchases = await purchaseModel.find({
             userId,
         })

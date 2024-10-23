@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-function Login()
+function Adminlogin()
 {
     const [email, setemail] = useState('');
     const [password, setpassword] = useState('');
@@ -37,15 +37,14 @@ function Login()
         e.preventDefault(); 
         console.log("signin")
         const fetchdata = async () => {
-            axios.post('http://localhost:3000/api/v1/user/signin', {
+            axios.post('http://localhost:3000/api/v1/admin/signin', {
                 email,
                 password
             }).then(response => {
-                console.log(response.data.userId);
-                navigate('/Home',{
+                console.log(response);
+                navigate('/Create',{
                     state: {
-                        message: response.data.userId,
-                        username: response.data.username
+                        message: response.data.adminId,
                       }
                 })
             }).catch(error => {
@@ -60,7 +59,7 @@ function Login()
     return (
 
         <div className="logincenter" >
-            <h1>Login</h1>
+            <h1>Login Admin Account</h1>
             <div className="loginchild trends">
                             <label>Email:</label>
                             <input
@@ -88,4 +87,4 @@ function Login()
     );
 }
 
-export default Login;
+export default Adminlogin;
