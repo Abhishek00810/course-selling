@@ -49,7 +49,9 @@ function Signup()
             <div className="part1">
                 <div className="upperbar">
                     <h1><i class="ri-leaf-fill"></i>100devx App</h1>
-                    <h4><i class="ri-arrow-left-line"></i>Go back</h4>
+                    <a href="
+                    http://localhost:5173"><h4><i class="ri-arrow-left-line"></i>Go back</h4></a>
+                    
                 </div>
                 <form className="main" onSubmit={CALLCREATEAPI}>
                     <h1>Create admin</h1>

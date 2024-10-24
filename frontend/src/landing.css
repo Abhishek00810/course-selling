@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  /* Basic body styling */
+html, body {
+    font-family: 'Roboto', sans-serif !important;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    
+  }
+
+a
+{
+    text-decoration: none;
+}
+
+.navbar{
+    margin-top: 30px;
+    padding: 0px 100px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.firstpart h1{
+    cursor: pointer;
+}
+
+.secondpart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secondpart h3{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 30px;
+}
+
+.thirdpart h3{
+    cursor: pointer;
+    font-size: 18px;
+    border: 2px solid #8f00ff;
+    border-radius: 50px;
+    color: #8f00ff;
+    padding: 10px 20px;
+}
+.upperbar h4{
+    color: black;
+}
+.thirdpart h3:hover{
+    background: linear-gradient(135deg, #8f00ff, #4b0082);
+    color: white;
+}
+
+.middlepart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle{
+    padding: 20px 100px;
+    color: white;
+    font-size: 35px;
+}
+.middle h1{
+    line-height: 90px;
+}
+
+.part2 svg{
+    width: 500px;
+    margin-right: 70px;
+}
+
+.mainbutton h3{
+    width: fit-content;
+    cursor: pointer;
+    font-size: 27px;
+    border: 2px solid #8f00ff;
+    border-radius: 50px;
+    color: #8f00ff;
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+.mainbutton h3:hover{
+    background: linear-gradient(135deg, #8f00ff, #4b0082);
+    color: white;
+}

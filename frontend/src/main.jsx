@@ -7,6 +7,7 @@ import Signup from './Signup.jsx';
 import Login from './Login.jsx';
 import Home from './Home.jsx';
 import Adminlogin from './adminLogin.jsx';
+import Landing from './Landing.jsx';
 
 import './index.css'
 import 'remixicon/fonts/remixicon.css'
@@ -21,7 +22,7 @@ createRoot(document.getElementById('root')).render(
       
       <Route path="/login" element={<Login />} />
 
-      <Route path="/" element={<Signup />} />
+      <Route path="/" element={<Landing />} />
 
       <Route path="/home" element={<Home />} />
 

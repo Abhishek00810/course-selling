@@ -193,7 +193,7 @@ function Home(props) {
                 ) : (
                     items.length > 0 ? ( // Check if Data has items
                         items.map((course, index) => ( // Map through the Data array
-                            <div style={{backgroundColor: getColor(course.courseType)}} className="box" onClick={() => ADDNEWCOURSE(course)} key={index}>
+                            <div style={{backgroundColor: getColor(course.courseType)}} className="box"  key={index}>
                                 <div className="type">
                                     <h1><i className="ri-apps-line"></i>{course.title}</h1> {/* Assuming course has a category */}
                                 </div>
@@ -313,8 +313,14 @@ function Home(props) {
                         <h1><i className="ri-user-line"></i></h1>
                         <h3>{userName}</h3>
                         <div className="github">
-                            <h2><i className="ri-github-line"></i>github</h2>
-                        </div>
+                            <h2><i className="ri-github-line"></i>20+ friends</h2>
+                            <div className="friends">
+                            <img id="firstimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR07xwOz5sF7vV6J2OHQ92dUiTiAyRqfzuWA&s" alt="" />
+                            <img id="secondimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9M4N0h4x_wfZ1U_G7Sogd88YJ7wUS0KhmKw&s" alt="" />
+                            <img id="thirdimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzIQBYxksacou3yqk9Xf_2MGg-kOGbkinIHw&s" alt="" />
+      
+                            </div>
+                   </div>
                     </div>
                     <div className="purchasedcourse">
                         <div className="mycoursetab">

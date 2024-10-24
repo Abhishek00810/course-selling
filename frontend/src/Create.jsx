@@ -22,14 +22,16 @@ function Create() {
   function CALLCREATECOURSE(e)
   {
     e.preventDefault();
-    console.log(location?.state?.message);
+
+    console.log(e.target.choice.value);
       const fetchdata = ()=>{
         axios.post("http://localhost:3000/api/v1/admin/course", {
           //title, description, price, imageUrl
           title: e.target.title.value,
           description: e.target.description.value,
           price: e.target.fees.value,
-          imageUrl: e.target.imageUrl.value
+          imageUrl: e.target.imageUrl.value,
+          courseType: e.target.choice.value
         },{
           headers: {
             'adminId': location?.state?.message,
