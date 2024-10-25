@@ -45,6 +45,17 @@ body, html {
     max-width: 100%;
 }
 
+.popup-delete{
+    position: relative;
+    background-color: #F7F7F7;
+    padding: 80px 250px;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 100%;
+}
+
 .close-button{
     position: absolute;
     right: 0;
@@ -113,4 +124,38 @@ body, html {
 .logout-parent{
     width: 500px;
     margin-left: 0px;
+}
+
+.delete-parent{
+    width: 500px;
+    margin-left: 0px;
+}
+.delete-parent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-25%, -25%);
+}
+.no-scroll {
+    overflow: hidden;
+  }
+.delete-parent h1{
+    font-size: 20px;
+    color: #4169E1;
+}
+
+.delete-parent button
+{
+    background-color: #2ECC71;
+    width: 90px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-right: 40px;
+
+}
+.delete-parent button:hover{
+    background-color: #27AE60;
 }

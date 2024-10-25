@@ -36,7 +36,6 @@ adminRouter.post('/signup', async function(req, res){
 
 adminRouter.post('/signin', async function(req, res){
     const {email, password} = req.body;
-    console.log(req.body);
     try
     {
         const user = await adminModel.findOne({
@@ -47,9 +46,11 @@ adminRouter.post('/signin', async function(req, res){
         if(result)
         {
             req.session.user = { email };
+            console.log(user.firstName);
             res.json({
                 message: "Login successfully",
-                adminId: user._id
+                adminId: user._id,
+                adminName: user.firstName
             })
         }
         else
@@ -99,33 +100,47 @@ adminRouter.post('/course', async function(req, res){
     }
 })
 
-
-adminRouter.put('/course', adminMiddleware, async function(req, res){
-    const {title, description, price, imageUrl, courseId} = req.body;
-    const {adminId} = req.header;
-    console.log(adminId);
+adminRouter.post('/deletecourse', async function(req, res)
+{
+    const {courseId} = req.body;
     try{
-        const course = await adminModel.updateOne({
-            _id: courseId,
-            creatorId: adminId
-        },{
-            title: title,
-            description: description,
-            price: price,
-            imageUrl: imageUrl,
-        })  
+        const course = await courseModel.deleteOne({_id: courseId});
         res.json({
-            message: "Updated",
-            courseId: course._id
+            message:"Deleted"
         })
-    }
-    catch{
+        console.log(course);
+        console.log("Document deleted: ", course);
+    }catch(e){
         res.json({
-            message: "Invalid admin",
-            adminId: adminId
+            message:"Error"
         })
+        console.log("Error while deleting: ", e);
     }
+
 })
+
+
+adminRouter.put('/course', adminMiddleware, async function(req, res) {
+    const { title, description, price, imageUrl, courseId } = req.body;
+    const { adminid } = req.headers;
+
+    try {
+        const result = await courseModel.updateOne(
+            { _id: courseId, creatorId: adminid },
+            { $set: { title, description, price, imageUrl } }  // Use `$set` to update fields
+        );
+
+        if (result.matchedCount === 0) {
+            return res.status(404).json({ message: "Course not found or admin not authorized" });
+        }
+
+        console.log(result.matchedCount);
+        res.json({ message: "Updated", courseId });
+    } catch (error) {
+        console.error("Update error:", error);  // Log the error for debugging
+        res.status(500).json({ message: "Invalid admin", adminId: adminid });
+    }
+});
 
 
 

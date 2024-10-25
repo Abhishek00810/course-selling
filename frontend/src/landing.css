@@ -61,6 +61,9 @@ a
     color: white;
 }
 
+button{
+    cursor: pointer;
+}
 .middlepart{
     display: flex;
     justify-content: space-between;

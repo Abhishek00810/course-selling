@@ -5,7 +5,6 @@ import Popup from "./Popup";
 import { useNavigate,useLocation } from 'react-router-dom';
 import { jwtDecode } from "jwt-decode";
 
-
 function Home(props) {
     const navigate = useNavigate();
     const location = useLocation();
@@ -25,7 +24,7 @@ function Home(props) {
     const [showAdd,setshowAdd] = useState(false);
     const [courseId, setcourseId] = useState('');
 
-
+    
     const getColor = (value)=>{
         if(value == 'It & Software') return '#F3C5C5';
         else if(value === 'Business') return '#FAE0C1';

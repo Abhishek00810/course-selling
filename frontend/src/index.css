@@ -256,3 +256,76 @@ input{
 .descriptioncourse textarea{
   font-size: 20px;
 }
+
+ /*admincourse css*/
+
+.adminbox{
+  background-color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 20px;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+.adminbox h3{
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.Admincourses{
+  margin-top: 20px;
+  cursor: default;
+}
+
+.firstbox{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.firstbox i{
+  cursor: pointer;
+}
+
+.firstbox i:hover{
+  color: red ;
+}
+.adminprice{
+  cursor: pointer;
+}
+
+.admincourseType i{
+  margin-right: 10px;
+}
+
+.twoicons i{
+  margin-left: 20px;
+
+}
+
+.ri-edit-line:hover{
+  color: #27AE60 !important;
+}
+
+#inputtext{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.update{
+  background-color: #2ECC71;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  margin-left: 10px;
+  color: rgb(236, 234, 234);
+  font-size: 14px;
+  font-weight: 600;
+}
+.update:hover{
+  background-color: #27AE60;
+}

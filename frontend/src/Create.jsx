@@ -2,9 +2,10 @@ import React from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate,useLocation } from 'react-router-dom';
-
+import Admincourse from "./Admincourse";
 function Create() {
   const location = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
     document.body.style.backgroundImage =
       "url('https://i.pinimg.com/1200x/9a/75/94/9a75941cc1ad9c490ef5c685aeecf932.jpg')";
@@ -43,7 +44,13 @@ function Create() {
         .catch(error=>{
           console.log(error)
         })
-    
+
+        navigate('/admincourse',{
+          state: {
+              message: location?.state?.message,
+              adminName: location?.state?.adminName
+            }
+      })
   }
   fetchdata();
 }

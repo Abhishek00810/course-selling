@@ -13,6 +13,8 @@ import './index.css'
 import 'remixicon/fonts/remixicon.css'
 import Create from './Create.jsx';
 import Adminsignup from './adminSignup.jsx';
+import Admincourse from './Admincourse.jsx';
+
 
 createRoot(document.getElementById('root')).render(
   <Router>
@@ -32,7 +34,8 @@ createRoot(document.getElementById('root')).render(
 
       
       <Route path="/adminsignup" element={<Adminsignup />} />
-
+      
+      <Route path="/admincourse" element={<Admincourse />} />
 
     </Routes>
   </div>

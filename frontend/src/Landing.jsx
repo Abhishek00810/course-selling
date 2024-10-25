@@ -5,8 +5,6 @@ import { gsap } from 'gsap';
 function Landing() {
   useEffect(() => {
     document.body.style.backgroundColor = "#101010";
-
-
     return () => {
       document.body.style.backgroundColor = null;
     };

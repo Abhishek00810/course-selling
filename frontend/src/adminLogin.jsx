@@ -41,10 +41,11 @@ function Adminlogin()
                 email,
                 password
             }).then(response => {
-                console.log(response);
+                console.log(response.data);
                 navigate('/Create',{
                     state: {
                         message: response.data.adminId,
+                        adminName: response.data.adminName
                       }
                 })
             }).catch(error => {

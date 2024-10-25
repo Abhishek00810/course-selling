@@ -26,6 +26,12 @@ courseRouter.get('/preview',async function(req, res){
     })
 })
 
+courseRouter.post('/previewadmin',async function(req, res){
+    const course = await courseModel.find({creatorId: req.body.adminId});
+    res.json({
+        course
+    })
+})
 
 module.exports = {
     courseRouter: courseRouter

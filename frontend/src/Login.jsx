@@ -10,8 +10,7 @@ function Login()
         document.body.style.backgroundRepeat =  'no-repeat'
         document.body.style.backgroundSize =  'cover'
         document.body.style.backgroundPosition =  'center'
-
-
+        
         return () => {
             document.body.style.backgroundImage = null;
             document.body.style.backgroundRepeat = null;
